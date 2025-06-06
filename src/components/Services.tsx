@@ -42,6 +42,13 @@ const services = [
 ];
 
 export const Services = () => {
+  const scrollToTestimonials = () => {
+    const element = document.getElementById('testimonials');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -80,6 +87,15 @@ export const Services = () => {
               </Card>
             </Link>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <button 
+            onClick={scrollToTestimonials}
+            className="text-blue-600 hover:text-blue-700 font-medium underline"
+          >
+            Découvrez les avis de nos clients →
+          </button>
         </div>
       </div>
     </section>

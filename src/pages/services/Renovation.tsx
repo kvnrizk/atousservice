@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowLeft, Phone, Home, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/Header";
 
 const renovationProjects = [
   {
@@ -35,23 +36,13 @@ const features = [
 ];
 
 export const Renovation = () => {
+  const handleQuoteClick = () => {
+    window.location.href = "/#contact";
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
-              <ArrowLeft className="h-5 w-5" />
-              <span>Retour à l'accueil</span>
-            </Link>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              <Phone className="h-4 w-4 mr-2" />
-              Devis gratuit
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-white py-16">
@@ -128,7 +119,7 @@ export const Renovation = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Contactez-nous pour discuter de votre projet de rénovation
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3" onClick={handleQuoteClick}>
             <Phone className="h-5 w-5 mr-2" />
             Demander un devis
           </Button>
