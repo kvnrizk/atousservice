@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import test from "/public/ats.png"
+
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +49,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={handleAccueilClick}>
             <img 
-                src="/public/ats.png" 
+                src={test}
                 alt="Atouts Services Logo" 
                 className="h-12 w-auto"
               />
