@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import test from "/public/ats.png"
 
-
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();

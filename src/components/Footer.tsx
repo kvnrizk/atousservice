@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
+import test from "/public/ats.png"
 
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -16,7 +17,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/public/ats.png" 
+                src={test} 
                 alt="Atouts Services Logo" 
                 className="h-12 w-auto"
               />
