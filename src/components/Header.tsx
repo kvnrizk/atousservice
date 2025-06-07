@@ -22,8 +22,22 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
+   const scrollToTop = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   const handleQuoteClick = () => {
     scrollToSection('contact');
+  };
+
+   const handleAccueilClick = (e: React.MouseEvent) => {
+    if (isHomePage) {
+      e.preventDefault();
+      scrollToTop();
+    }
   };
 
   return (
@@ -31,7 +45,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3" onClick={handleAccueilClick}>
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
               AS
             </div>
@@ -43,7 +57,11 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link 
+              to="/" 
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+              onClick={handleAccueilClick}
+            >
               Accueil
             </Link>
             <button 
@@ -91,7 +109,10 @@ export const Header = () => {
               <Link 
                 to="/" 
                 className="text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  handleAccueilClick(e);
+                  setIsMenuOpen(false);
+                }}
               >
                 Accueil
               </Link>
