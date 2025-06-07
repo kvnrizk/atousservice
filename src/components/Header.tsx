@@ -46,13 +46,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={handleAccueilClick}>
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              AS
-            </div>
-            <div className="hidden md:block">
-              <h1 className="text-xl font-bold text-gray-900">Atouts Services</h1>
-              <p className="text-sm text-gray-600">Rénovation & Services</p>
-            </div>
+            <img 
+                src="/public/ats.jpg" 
+                alt="Atouts Services Logo" 
+                className="h-12 w-auto"
+              />
           </Link>
 
           {/* Desktop Navigation */}

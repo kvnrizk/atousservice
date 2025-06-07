@@ -15,13 +15,11 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                AS
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Atouts Services</h3>
-                <p className="text-gray-300">Rénovation & Services</p>
-              </div>
+              <img 
+                src="/public/ats.jpg" 
+                alt="Atouts Services Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Votre expert en rénovation à Issy-les-Moulineaux. Plus de 10 ans d'expérience 
