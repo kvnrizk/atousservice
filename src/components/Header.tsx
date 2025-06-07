@@ -47,7 +47,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={handleAccueilClick}>
             <img 
-                src="/public/ats.jpg" 
+                src="/public/ats.png" 
                 alt="Atouts Services Logo" 
                 className="h-12 w-auto"
               />

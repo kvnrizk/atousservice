@@ -16,7 +16,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/public/ats.jpg" 
+                src="/public/ats.png" 
                 alt="Atouts Services Logo" 
                 className="h-12 w-auto"
               />
