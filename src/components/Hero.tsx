@@ -18,13 +18,14 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 to-white py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary/5 via-white to-primary/10 py-20 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent opacity-40"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Votre Expert en
-            <span className="text-blue-600 block">Rénovation</span>
+            <span className="text-primary block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Rénovation</span>
             à Issy-les-Moulineaux
           </h1>
           
@@ -34,11 +35,11 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3" onClick={scrollToContact}>
+            <Button size="lg" className="gradient-primary hover:opacity-90 shadow-elegant text-white px-8 py-3 hover-scale" onClick={scrollToContact}>
               <Phone className="h-5 w-5 mr-2" />
               Devis gratuit
             </Button>
-            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3" onClick={scrollToServices}>
+            <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-primary/5 px-8 py-3 shadow-md hover-scale backdrop-blur-sm" onClick={scrollToServices}>
               Voir nos réalisations
             </Button>
           </div>

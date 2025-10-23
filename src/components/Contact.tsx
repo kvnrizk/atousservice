@@ -61,8 +61,8 @@ export const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Nos coordonnées</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-blue-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Adresse</h4>
@@ -71,28 +71,39 @@ export const Contact = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-blue-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Téléphone</h4>
-                    <p className="text-gray-600">01 XX XX XX XX</p>
+                    <a 
+                      href="tel:+33XXXXXXXXX" 
+                      className="text-primary hover:text-primary/80 font-medium transition-colors"
+                    >
+                      01 XX XX XX XX
+                    </a>
+                    <p className="text-xs text-gray-500 mt-1">Cliquez pour appeler</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-blue-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">contact@atouts-services.fr</p>
+                    <a 
+                      href="mailto:contact@atouts-services.fr" 
+                      className="text-primary hover:text-primary/80 transition-colors"
+                    >
+                      contact@atouts-services.fr
+                    </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-blue-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Horaires</h4>
@@ -105,10 +116,10 @@ export const Contact = () => {
               </div>
             </div>
             
-            <Card className="bg-blue-600 text-white border-0">
+            <Card className="gradient-primary text-white border-0 shadow-elegant">
               <CardContent className="p-6">
                 <h4 className="text-xl font-bold mb-2">Zone d'intervention</h4>
-                <p className="text-blue-100">
+                <p className="text-white/90">
                   Nous intervenons dans tout le département des Hauts-de-Seine et Paris : 
                   Issy-les-Moulineaux, Boulogne-Billancourt, Meudon, Sèvres, Vanves, 
                   Clamart et communes limitrophes.
@@ -118,7 +129,7 @@ export const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <Card className="border-0 shadow-lg">
+          <Card className="border-0 shadow-elegant hover-lift">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Demande de devis</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -202,7 +213,7 @@ export const Contact = () => {
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+                  className="w-full gradient-primary hover:opacity-90 text-white py-3 shadow-elegant transition-all"
                 >
                   <Send className="h-4 w-4 mr-2" />
                   {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}

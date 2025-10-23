@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import test from "/public/ats.png"
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +22,7 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
-   const scrollToTop = () => {
+  const scrollToTop = () => {
     if (isHomePage) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -34,7 +33,7 @@ export const Header = () => {
     scrollToSection('contact');
   };
 
-   const handleAccueilClick = (e: React.MouseEvent) => {
+  const handleAccueilClick = (e: React.MouseEvent) => {
     if (isHomePage) {
       e.preventDefault();
       scrollToTop();
@@ -42,42 +41,42 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+    <header className="bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100/50 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={handleAccueilClick}>
             <img 
-                src={test}
-                alt="Atouts Services Logo" 
-                className="h-12 w-auto"
-              />
+              src="/lovable-uploads/8384bd8b-e487-4d50-8e86-fcf6cf24593a.png" 
+              alt="Atouts Services Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               to="/" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
               onClick={handleAccueilClick}
             >
               Accueil
             </Link>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
               Témoignages
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
               Contact
             </button>
@@ -86,7 +85,7 @@ export const Header = () => {
           {/* CTA Button */}
           <Button 
             onClick={handleQuoteClick}
-            className="hidden md:flex bg-blue-600 hover:bg-blue-700"
+            className="hidden md:flex gradient-primary hover:opacity-90 shadow-elegant text-white"
           >
             <Phone className="h-4 w-4 mr-2" />
             Devis gratuit
@@ -107,7 +106,7 @@ export const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-primary transition-colors font-medium"
                 onClick={(e) => {
                   handleAccueilClick(e);
                   setIsMenuOpen(false);
@@ -117,25 +116,25 @@ export const Header = () => {
               </Link>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-left text-gray-700 hover:text-primary transition-colors font-medium"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
-                className="text-left text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-left text-gray-700 hover:text-primary transition-colors font-medium"
               >
                 Témoignages
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-left text-gray-700 hover:text-primary transition-colors font-medium"
               >
                 Contact
               </button>
               <Button 
                 onClick={handleQuoteClick}
-                className="bg-blue-600 hover:bg-blue-700 w-full"
+                className="gradient-primary hover:opacity-90 shadow-elegant text-white w-full"
               >
                 <Phone className="h-4 w-4 mr-2" />
                 Devis gratuit

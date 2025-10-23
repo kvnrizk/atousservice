@@ -62,10 +62,10 @@ export const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Link key={index} to={service.link} className="block">
-              <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg cursor-pointer h-full">
+              <Card className="group hover-lift transition-all duration-300 border-0 shadow-elegant cursor-pointer h-full bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-8">
-                  <div className="text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="h-12 w-12" />
+                  <div className="bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-glow">
+                    <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -74,13 +74,13 @@ export const Services = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="mt-6 text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
+                  <div className="mt-6 text-primary font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
                     Voir nos réalisations →
                   </div>
                 </CardContent>

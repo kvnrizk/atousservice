@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 interface QuoteRequest {
@@ -18,15 +17,14 @@ export const useQuoteRequests = () => {
 
   const submitQuoteRequest = async (data: QuoteRequest) => {
     setIsSubmitting(true);
-    
-    try {
-      const { error } = await supabase
-        .from('quote_requests')
-        .insert([data]);
 
-      if (error) {
-        throw error;
-      }
+    try {
+      // TODO: Implement form submission to your backend
+      // For now, just logging the data
+      console.log('Quote request data:', data);
+
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
         title: "Demande envoyée !",

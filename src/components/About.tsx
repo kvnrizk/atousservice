@@ -31,10 +31,10 @@ const stats = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="animate-fade-in">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Pourquoi choisir Atouts Services ?
             </h2>
@@ -46,8 +46,8 @@ export const About = () => {
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Award className="h-6 w-6 text-blue-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Award className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Expertise reconnue</h3>
@@ -56,8 +56,8 @@ export const About = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Users className="h-6 w-6 text-blue-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Accompagnement personnalisé</h3>
@@ -66,8 +66,8 @@ export const About = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-blue-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Garantie et assurance</h3>
@@ -79,9 +79,9 @@ export const About = () => {
           
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="text-center border-0 shadow-elegant hover-lift">
                 <CardContent className="p-6">
-                  <div className="text-blue-600 mb-4 flex justify-center">
+                  <div className="text-primary mb-4 flex justify-center">
                     <stat.icon className="h-8 w-8" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
